@@ -12,11 +12,12 @@ public class JoinView extends JFrame implements ActionListener {
     private MainControl control;
     private JButton bJoin;
     private JTextField tfUsername;
+
     public JoinView(MainControl control) throws HeadlessException {
         this.control = control;
         this.setTitle("Basta");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setLayout(new GridLayout(4,1));
+        this.setLayout(new GridLayout(4, 1));
 
         ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/icono.png")));
         setIconImage(icon.getImage());
@@ -47,19 +48,19 @@ public class JoinView extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        if (this.tfUsername.getText().isEmpty()){
+        if (this.tfUsername.getText().isEmpty()) {
             JOptionPane.showMessageDialog(
                     this,
                     "Es obligatorio un nombre de usuario",
                     "Error",
                     JOptionPane.WARNING_MESSAGE
             );
-        }else {
+        } else {
             this.control.startGame(this.tfUsername.getText());
         }
     }
 
-    public void connectionError(int attempts){
+    public void connectionError(int attempts) {
         JOptionPane.showMessageDialog(
                 this,
                 "No fue posible conectarse, intentando de nuevo " + attempts + " veces más",

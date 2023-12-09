@@ -25,27 +25,27 @@ public class GameView extends JFrame implements ActionListener {
     private JButton bBasta;
     private JPanel pPoints;
     private JTextField tfPoints;
+
     public GameView(MainControl mainControl) throws HeadlessException {
         this.mainControl = mainControl;
         this.setTitle("Basta");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
-        this.setLayout(new GridLayout(4,1));
+        this.setLayout(new GridLayout(4, 1));
 
         ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/icono.png")));
         setIconImage(icon.getImage());
 
         // Initialize all JPanels
         this.pStatus = new JPanel(new GridLayout(1, 2));
-        this.pAnswers = new JPanel(new GridLayout(6,3));
-        this.pPoints = new JPanel(new GridLayout(1,2));
+        this.pAnswers = new JPanel(new GridLayout(6, 3));
+        this.pPoints = new JPanel(new GridLayout(1, 2));
 
         // Initialize components of Status Panel
         this.lStatus = new JLabel("Estado");
         ImageIcon originalIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/cargando.png")));
         Image resizedImage = originalIcon.getImage().getScaledInstance(300, 169, Image.SCALE_SMOOTH);
         this.lStatusImage = new JLabel(new ImageIcon(resizedImage));
-        //this.lStatusImage.setBackground(Color.YELLOW);
         this.lStatusImage.setEnabled(true);
         this.pStatus.add(this.lStatus);
         this.pStatus.add(this.lStatusImage);
@@ -110,12 +110,12 @@ public class GameView extends JFrame implements ActionListener {
         this.setLocationRelativeTo(null);
     }
 
-    public void setStatus(int status){
+    public void setStatus(int status) {
         ImageIcon iconResized;
         Image image;
         lStatusImage.setText("");
         lStatusImage.setIcon(null);
-        switch (status){
+        switch (status) {
             case Constants.CARGANDO:
                 image = new ImageIcon(Objects.requireNonNull(getClass().getResource("/cargando.png"))).getImage();
                 iconResized = new ImageIcon(image.getScaledInstance(300, 169, Image.SCALE_SMOOTH));
@@ -141,11 +141,11 @@ public class GameView extends JFrame implements ActionListener {
         }
     }
 
-    public void setTotalPoints(int points){
+    public void setTotalPoints(int points) {
         this.tfPoints.setText(String.valueOf(points));
     }
 
-    public void setLetter(String letter){
+    public void setLetter(String letter) {
         this.lStatus.setText("Letra de la ronda: ");
         this.lStatusImage.setIcon(null);
         this.lStatusImage.setFont(new Font("Arial", Font.BOLD, 40));
@@ -158,7 +158,7 @@ public class GameView extends JFrame implements ActionListener {
         this.tfColor.setEditable(true);
     }
 
-    public void setCalificacion(int nombre, int florFruto, int pais, int animal, int color){
+    public void setCalificacion(int nombre, int florFruto, int pais, int animal, int color) {
         this.tfPtsNombre.setText(String.valueOf(nombre));
         this.tfPtsFlorFruto.setText(String.valueOf(florFruto));
         this.tfPtsPais.setText(String.valueOf(pais));

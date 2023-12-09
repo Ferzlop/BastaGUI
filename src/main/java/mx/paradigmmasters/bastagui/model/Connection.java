@@ -10,9 +10,9 @@ public class Connection {
     private ObjectOutputStream output;
     private ObjectInputStream input;
 
-    public Connection() throws RuntimeException{
+    public Connection() throws RuntimeException {
         try {
-            this.socket = new Socket("localhost",5555);
+            this.socket = new Socket("localhost", 5555);
             this.output = new ObjectOutputStream(socket.getOutputStream());
             this.input = new ObjectInputStream(socket.getInputStream());
         } catch (IOException e) {

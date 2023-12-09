@@ -13,6 +13,7 @@ public class MainControl {
     private Connection connection;
     private int connectionAttempts;
     private int estado = Constants.CARGANDO;
+
     public MainControl() {
         this.joinView = new JoinView(this);
     }
@@ -25,13 +26,13 @@ public class MainControl {
         this.estado = estado;
     }
 
-    public void startGame(String userName){
+    public void startGame(String userName) {
         boolean isConnected = false;
         this.connectionAttempts = 3;
         do {
             isConnected = tryConnection();
             this.connectionAttempts--;
-        }while (!isConnected);
+        } while (!isConnected);
 
         try {
             this.connection.getOutput().writeObject(userName);
@@ -47,29 +48,32 @@ public class MainControl {
 
     }
 
-    public boolean tryConnection(){
+    public boolean tryConnection() {
         try {
             this.connection = new Connection();
             this.connectionAttempts = 3;
             return true;
-        }catch (RuntimeException e) {
-            if (this.connectionAttempts == 0){
+        } catch (RuntimeException e) {
+            if (this.connectionAttempts == 0) {
                 throw new RuntimeException(e);
-            }else {
+            } else {
                 this.joinView.connectionError(this.connectionAttempts);
             }
             return false;
         }
     }
-    public void setEstadoVista(int estado, int puntos){
+
+    public void setEstadoVista(int estado, int puntos) {
         this.estado = estado;
         this.gameView.setStatus(estado);
         this.gameView.setTotalPoints(puntos);
     }
-    public void setLetra(String letter){
+
+    public void setLetra(String letter) {
         this.gameView.setLetter(letter);
     }
-    public void setCalificacion(Calificacion calificacion){
+
+    public void setCalificacion(Calificacion calificacion) {
         this.gameView.setCalificacion(
                 calificacion.getNombre(),
                 calificacion.getFlorFruto(),
@@ -78,6 +82,7 @@ public class MainControl {
                 calificacion.getColor()
         );
     }
+
     public void sendAnswers(
             String nombre,
             String florFruto,

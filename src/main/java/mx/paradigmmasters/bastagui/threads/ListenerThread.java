@@ -9,7 +9,7 @@ import mx.paradigmmasters.bastagui.model.JsonSerializer;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
-public class ListenerThread extends Thread{
+public class ListenerThread extends Thread {
     private final ObjectInputStream input;
     private final MainControl mainControl;
 
@@ -29,7 +29,7 @@ public class ListenerThread extends Thread{
                 JsonObject jsonObject = gson.fromJson(json, JsonObject.class);
 
                 for (String key : jsonObject.keySet()) {
-                    switch (key){
+                    switch (key) {
                         case "Estado":
                             this.mainControl.setEstadoVista(new JsonSerializer().receiveStatus(jsonObject.getAsJsonObject(key)), new JsonSerializer().receiveTotalPoints(jsonObject.getAsJsonObject(key)));
                             break;
