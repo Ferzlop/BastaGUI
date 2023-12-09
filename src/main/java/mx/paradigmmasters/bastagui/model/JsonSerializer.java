@@ -13,8 +13,6 @@ public class JsonSerializer {
         gsonBuilder.setPrettyPrinting();
         Gson gson = gsonBuilder.create();
 
-        System.out.println(gson.fromJson(json, Estado.class).getEstado());
-
         return gson.fromJson(json, Estado.class).getEstado();
     }
 
@@ -22,8 +20,6 @@ public class JsonSerializer {
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.setPrettyPrinting();
         Gson gson = gsonBuilder.create();
-
-        System.out.println(gson.fromJson(json, Estado.class).getPuntos());
 
         return gson.fromJson(json, Estado.class).getPuntos();
     }
