@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.Objects;
 
 import mx.paradigmmasters.bastagui.control.MainControl;
 import mx.paradigmmasters.bastagui.model.Constants;
@@ -13,7 +14,7 @@ public class GameView extends JFrame implements ActionListener {
     private MainControl mainControl;
     private JPanel pStatus;
     private JLabel lStatus;
-    private JTextField tfStatus;
+    private JLabel lStatusImage;
     private JPanel pAnswers;
     private JTextField tfNombre, tfFlorFruto, tfPais, tfAnimal, tfColor;
     private JTextField tfPtsNombre;
@@ -31,6 +32,9 @@ public class GameView extends JFrame implements ActionListener {
         this.setVisible(true);
         this.setLayout(new GridLayout(4,1));
 
+        ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/icono.png")));
+        setIconImage(icon.getImage());
+
         // Initialize all JPanels
         this.pStatus = new JPanel(new GridLayout(1, 2));
         this.pAnswers = new JPanel(new GridLayout(6,3));
@@ -38,11 +42,13 @@ public class GameView extends JFrame implements ActionListener {
 
         // Initialize components of Status Panel
         this.lStatus = new JLabel("Estado");
-        this.tfStatus = new JTextField("Cargando");
-        this.tfStatus.setBackground(Color.YELLOW);
-        this.tfStatus.setEditable(false);
+        ImageIcon originalIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/cargando.png")));
+        Image resizedImage = originalIcon.getImage().getScaledInstance(300, 169, Image.SCALE_SMOOTH);
+        this.lStatusImage = new JLabel(new ImageIcon(resizedImage));
+        //this.lStatusImage.setBackground(Color.YELLOW);
+        this.lStatusImage.setEnabled(true);
         this.pStatus.add(this.lStatus);
-        this.pStatus.add(this.tfStatus);
+        this.pStatus.add(this.lStatusImage);
 
         // Initialize components of Answers Panel
         this.tfNombre = new JTextField();
@@ -83,6 +89,9 @@ public class GameView extends JFrame implements ActionListener {
 
         // Initialize Button component
         this.bBasta = new JButton("¡BASTA!");
+        this.bBasta.setFont(new Font("Arial", Font.BOLD, 50));
+        Color lightBrown = new Color(201, 172, 139);
+        bBasta.setBackground(lightBrown);
         this.bBasta.addActionListener(this);
 
         // Initialize components of Points Panel
@@ -97,19 +106,27 @@ public class GameView extends JFrame implements ActionListener {
         this.add(this.bBasta);
         this.add(this.pPoints);
 
-        this.pack();
+        this.setSize(400, 700);
+        this.setLocationRelativeTo(null);
     }
 
     public void setStatus(int status){
-        this.lStatus.setText("Estado");
+        ImageIcon iconResized;
+        Image image;
+        lStatusImage.setText("");
+        lStatusImage.setIcon(null);
         switch (status){
             case Constants.CARGANDO:
-                this.tfStatus.setText("Cargando");
-                this.tfStatus.setBackground(Color.YELLOW);
+                image = new ImageIcon(Objects.requireNonNull(getClass().getResource("/cargando.png"))).getImage();
+                iconResized = new ImageIcon(image.getScaledInstance(300, 169, Image.SCALE_SMOOTH));
+                lStatusImage.setIcon(iconResized);
+                this.lStatus.setText("Estado");
                 break;
             case Constants.LISTO:
-                this.tfStatus.setText("Esperando letra");
-                this.tfStatus.setBackground(Color.GREEN);
+                image = new ImageIcon(Objects.requireNonNull(getClass().getResource("/esperandoLetra.png"))).getImage();
+                iconResized = new ImageIcon(image.getScaledInstance(300, 169, Image.SCALE_SMOOTH));
+                lStatusImage.setIcon(iconResized);
+                this.lStatus.setText("Estado");
                 this.tfNombre.setText("");
                 this.tfFlorFruto.setText("");
                 this.tfPais.setText("");
@@ -117,8 +134,10 @@ public class GameView extends JFrame implements ActionListener {
                 this.tfColor.setText("");
                 break;
             case Constants.FINALIZADO:
-                this.tfStatus.setText("Finalizado");
-                this.tfStatus.setBackground(Color.RED);
+                image = new ImageIcon(Objects.requireNonNull(getClass().getResource("/finalizado.png"))).getImage();
+                iconResized = new ImageIcon(image.getScaledInstance(300, 169, Image.SCALE_SMOOTH));
+                lStatusImage.setIcon(iconResized);
+                this.lStatus.setText("Estado");
         }
     }
 
@@ -128,7 +147,9 @@ public class GameView extends JFrame implements ActionListener {
 
     public void setLetter(String letter){
         this.lStatus.setText("Letra de la ronda: ");
-        this.tfStatus.setText(letter);
+        this.lStatusImage.setIcon(null);
+        this.lStatusImage.setFont(new Font("Arial", Font.BOLD, 40));
+        this.lStatusImage.setText(letter);
         this.bBasta.setEnabled(true);
         this.tfNombre.setEditable(true);
         this.tfFlorFruto.setEditable(true);

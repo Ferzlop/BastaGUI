@@ -4,26 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dafa7f4-33d3-4e3e-93d7-b13e7d3b064f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/control/MainControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Calificacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Connection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Estado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/JsonSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Letra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Respuesta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/threads/ListenerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/view/GameView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/view/JoinView.java" afterDir="false" />
+    <list default="true" id="4dafa7f4-33d3-4e3e-93d7-b13e7d3b064f" name="Changes" comment="Cambiar el tamaño de la letra de la ronda">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cargando.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cargando.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/esperandoLetra.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/esperandoLetra.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/finalizado.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/finalizado.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -54,10 +42,13 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/umartinez/Repos/PROYECTOBASTA&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ferga/IdeaProjects/BastaGUI_verdadero/src/main/resources&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ferga\IdeaProjects\BastaGUI_verdadero\src\main\resources" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="mx.paradigmmasters.bastagui.threads" />
     </key>
@@ -80,6 +71,125 @@
       <option name="presentableId" value="Default" />
       <updated>1701808617421</updated>
     </task>
+    <task id="LOCAL-00001" summary="Cambiar ícono de la ventana">
+      <created>1702089281566</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702089281566</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Definir tamaño y centrar la ventana">
+      <created>1702089436288</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702089436288</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Usar opción más segura para el ícono de la ventana">
+      <created>1702091456419</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702091456419</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Quitar pack() para poder modificar el tamaño de la ventana">
+      <created>1702091661423</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702091661423</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fijar el tamaño de la ventana y su alineación al centro al final del constructor en GameView y JoinView">
+      <created>1702100950225</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702100950225</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Cambiar tamaño de letra y color en botones Unirse al Juego y Basta">
+      <created>1702101023593</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702101023593</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Cambiar tamaño de la letra en la etiqueta &quot;Basta online&quot; y &quot;Selecciona un nombre de usuario&quot; en la clase JoinView">
+      <created>1702101085340</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702101085340</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Cambiar tfStatus a JLabel y por consiguiente, renombrarlo con lStatusImage">
+      <created>1702108595989</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702108595989</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Cambiar los estados de etiquetas a imágenes. Añadir las imágenes a la carpeta sources y ajustar su tamaño al textfield.">
+      <created>1702110850156</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702110850156</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Intercambiar entre etiquetas e imágenes según sea el caso que se elija para el estado.">
+      <created>1702110887965</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702110887965</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Cambiar &quot;this.setVisible(true)&quot; al final del constructor para evitar que la ventana aparezca en blanco.">
+      <created>1702147932170</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702147932170</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Redimensionar primera imagen de cargado">
+      <created>1702148862862</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702148862862</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Cambiar el tamaño de la letra de la ronda">
+      <created>1702149474834</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702149474834</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Cambiar ícono de la ventana" />
+    <MESSAGE value="Definir tamaño y centrar la ventana" />
+    <MESSAGE value="Usar opción más segura para el ícono de la ventana" />
+    <MESSAGE value="Quitar pack() para poder modificar el tamaño de la ventana" />
+    <MESSAGE value="Fijar el tamaño de la ventana y su alineación al centro al final del constructor en GameView y JoinView" />
+    <MESSAGE value="Cambiar tamaño de letra y color en botones Unirse al Juego y Basta" />
+    <MESSAGE value="Cambiar tamaño de la letra en la etiqueta &quot;Basta online&quot; y &quot;Selecciona un nombre de usuario&quot; en la clase JoinView" />
+    <MESSAGE value="Cambiar tfStatus a JLabel y por consiguiente, renombrarlo con lStatusImage" />
+    <MESSAGE value="Cambiar los estados de etiquetas a imágenes. Añadir las imágenes a la carpeta sources y ajustar su tamaño al textfield." />
+    <MESSAGE value="Intercambiar entre etiquetas e imágenes según sea el caso que se elija para el estado." />
+    <MESSAGE value="Cambiar &quot;this.setVisible(true)&quot; al final del constructor para evitar que la ventana aparezca en blanco." />
+    <MESSAGE value="Redimensionar primera imagen de cargado" />
+    <MESSAGE value="Cambiar el tamaño de la letra de la ronda" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambiar el tamaño de la letra de la ronda" />
   </component>
 </project>
