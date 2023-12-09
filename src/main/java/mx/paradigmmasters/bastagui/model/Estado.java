@@ -8,15 +8,7 @@ public class Estado {
         return estado;
     }
 
-    public void setEstado(int estado) {
-        this.estado = estado;
-    }
-
     public int getPuntos() {
         return puntos;
-    }
-
-    public void setPuntos(int puntos) {
-        this.puntos = puntos;
     }
 }

@@ -11,20 +11,21 @@ import mx.paradigmmasters.bastagui.control.MainControl;
 import mx.paradigmmasters.bastagui.model.Constants;
 
 public class GameView extends JFrame implements ActionListener {
-    private MainControl mainControl;
-    private JPanel pStatus;
-    private JLabel lStatus;
-    private JLabel lStatusImage;
-    private JPanel pAnswers;
-    private JTextField tfNombre, tfFlorFruto, tfPais, tfAnimal, tfColor;
-    private JTextField tfPtsNombre;
-    private JTextField tfPtsFlorFruto;
-    private JTextField tfPtsPais;
-    private JTextField tfPtsAnimal;
-    private JTextField tfPtsColor;
-    private JButton bBasta;
-    private JPanel pPoints;
-    private JTextField tfPoints;
+    private final MainControl mainControl;
+    private final JLabel lStatus;
+    private final JLabel lStatusImage;
+    private final JTextField tfNombre;
+    private final JTextField tfFlorFruto;
+    private final JTextField tfPais;
+    private final JTextField tfAnimal;
+    private final JTextField tfColor;
+    private final JTextField tfPtsNombre;
+    private final JTextField tfPtsFlorFruto;
+    private final JTextField tfPtsPais;
+    private final JTextField tfPtsAnimal;
+    private final JTextField tfPtsColor;
+    private final JButton bBasta;
+    private final JTextField tfPoints;
 
     public GameView(MainControl mainControl) throws HeadlessException {
         this.mainControl = mainControl;
@@ -37,9 +38,9 @@ public class GameView extends JFrame implements ActionListener {
         setIconImage(icon.getImage());
 
         // Initialize all JPanels
-        this.pStatus = new JPanel(new GridLayout(1, 2));
-        this.pAnswers = new JPanel(new GridLayout(6, 3));
-        this.pPoints = new JPanel(new GridLayout(1, 2));
+        JPanel pStatus = new JPanel(new GridLayout(1, 2));
+        JPanel pAnswers = new JPanel(new GridLayout(6, 3));
+        JPanel pPoints = new JPanel(new GridLayout(1, 2));
 
         // Initialize components of Status Panel
         this.lStatus = new JLabel("Estado");
@@ -47,8 +48,8 @@ public class GameView extends JFrame implements ActionListener {
         Image resizedImage = originalIcon.getImage().getScaledInstance(300, 169, Image.SCALE_SMOOTH);
         this.lStatusImage = new JLabel(new ImageIcon(resizedImage));
         this.lStatusImage.setEnabled(true);
-        this.pStatus.add(this.lStatus);
-        this.pStatus.add(this.lStatusImage);
+        pStatus.add(this.lStatus);
+        pStatus.add(this.lStatusImage);
 
         // Initialize components of Answers Panel
         this.tfNombre = new JTextField();
@@ -68,24 +69,24 @@ public class GameView extends JFrame implements ActionListener {
         this.tfPtsColor = new JTextField();
         this.tfPtsColor.setEditable(false);
 
-        this.pAnswers.add(new JLabel("Categoría"));
-        this.pAnswers.add(new JLabel("Respuesta"));
-        this.pAnswers.add(new JLabel("Puntos"));
-        this.pAnswers.add(new JLabel("Nombre: "));
-        this.pAnswers.add(tfNombre);
-        this.pAnswers.add(tfPtsNombre);
-        this.pAnswers.add(new JLabel("Flor o fruto: "));
-        this.pAnswers.add(tfFlorFruto);
-        this.pAnswers.add(tfPtsFlorFruto);
-        this.pAnswers.add(new JLabel("País: "));
-        this.pAnswers.add(tfPais);
-        this.pAnswers.add(tfPtsPais);
-        this.pAnswers.add(new JLabel("Animal: "));
-        this.pAnswers.add(tfAnimal);
-        this.pAnswers.add(tfPtsAnimal);
-        this.pAnswers.add(new JLabel("Color: "));
-        this.pAnswers.add(tfColor);
-        this.pAnswers.add(tfPtsColor);
+        pAnswers.add(new JLabel("Categoría"));
+        pAnswers.add(new JLabel("Respuesta"));
+        pAnswers.add(new JLabel("Puntos"));
+        pAnswers.add(new JLabel("Nombre: "));
+        pAnswers.add(tfNombre);
+        pAnswers.add(tfPtsNombre);
+        pAnswers.add(new JLabel("Flor o fruto: "));
+        pAnswers.add(tfFlorFruto);
+        pAnswers.add(tfPtsFlorFruto);
+        pAnswers.add(new JLabel("País: "));
+        pAnswers.add(tfPais);
+        pAnswers.add(tfPtsPais);
+        pAnswers.add(new JLabel("Animal: "));
+        pAnswers.add(tfAnimal);
+        pAnswers.add(tfPtsAnimal);
+        pAnswers.add(new JLabel("Color: "));
+        pAnswers.add(tfColor);
+        pAnswers.add(tfPtsColor);
 
         // Initialize Button component
         this.bBasta = new JButton("¡BASTA!");
@@ -97,14 +98,14 @@ public class GameView extends JFrame implements ActionListener {
         // Initialize components of Points Panel
         this.tfPoints = new JTextField();
         this.tfPoints.setEditable(false);
-        this.pPoints.add(new JLabel("Puntos totales"));
-        this.pPoints.add(this.tfPoints);
+        pPoints.add(new JLabel("Puntos totales"));
+        pPoints.add(this.tfPoints);
 
         // Add JPanels to frame
-        this.add(this.pStatus);
-        this.add(this.pAnswers);
+        this.add(pStatus);
+        this.add(pAnswers);
         this.add(this.bBasta);
-        this.add(this.pPoints);
+        this.add(pPoints);
 
         this.setSize(400, 700);
         this.setLocationRelativeTo(null);

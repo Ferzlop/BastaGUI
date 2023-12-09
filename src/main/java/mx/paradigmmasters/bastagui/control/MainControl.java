@@ -8,7 +8,7 @@ import mx.paradigmmasters.bastagui.view.JoinView;
 import java.io.IOException;
 
 public class MainControl {
-    private JoinView joinView;
+    private final JoinView joinView;
     private GameView gameView;
     private Connection connection;
     private int connectionAttempts;
@@ -22,12 +22,8 @@ public class MainControl {
         return estado;
     }
 
-    public void setEstado(int estado) {
-        this.estado = estado;
-    }
-
     public void startGame(String userName) {
-        boolean isConnected = false;
+        boolean isConnected;
         this.connectionAttempts = 3;
         do {
             isConnected = tryConnection();

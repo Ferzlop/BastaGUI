@@ -9,9 +9,8 @@ import java.awt.event.ActionListener;
 import java.util.Objects;
 
 public class JoinView extends JFrame implements ActionListener {
-    private MainControl control;
-    private JButton bJoin;
-    private JTextField tfUsername;
+    private final MainControl control;
+    private final JTextField tfUsername;
 
     public JoinView(MainControl control) throws HeadlessException {
         this.control = control;
@@ -22,11 +21,11 @@ public class JoinView extends JFrame implements ActionListener {
         ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/icono.png")));
         setIconImage(icon.getImage());
 
-        this.bJoin = new JButton("Unirse al juego");
-        this.bJoin.setFont(new Font("Arial", Font.BOLD, 30));
+        JButton bJoin = new JButton("Unirse al juego");
+        bJoin.setFont(new Font("Arial", Font.BOLD, 30));
         Color lightBrown = new Color(201, 172, 139);
         bJoin.setBackground(lightBrown);
-        this.bJoin.addActionListener(this);
+        bJoin.addActionListener(this);
         this.tfUsername = new JTextField();
 
         JLabel lTitle = new JLabel("Basta online");
@@ -39,7 +38,7 @@ public class JoinView extends JFrame implements ActionListener {
         this.add(lTitle);
         this.add(lUserName);
         this.add(this.tfUsername);
-        this.add(this.bJoin);
+        this.add(bJoin);
 
         this.setSize(400, 400);
         this.setLocationRelativeTo(null);

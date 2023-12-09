@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dafa7f4-33d3-4e3e-93d7-b13e7d3b064f" name="Changes" comment="Cambiar el tamaño de la letra de la ronda">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4dafa7f4-33d3-4e3e-93d7-b13e7d3b064f" name="Changes" comment="Aplicado estilizado por defecto de IntelliJ">
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/control/MainControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/control/MainControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Calificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Calificacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Estado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Estado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Letra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Letra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Respuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/model/Respuesta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/view/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/view/GameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/view/JoinView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/paradigmmasters/bastagui/view/JoinView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702149474834</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Aplicado estilizado por defecto de IntelliJ">
+      <option name="closed" value="true" />
+      <created>1702152392116</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702152392116</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +210,7 @@
     <MESSAGE value="Cambiar &quot;this.setVisible(true)&quot; al final del constructor para evitar que la ventana aparezca en blanco." />
     <MESSAGE value="Redimensionar primera imagen de cargado" />
     <MESSAGE value="Cambiar el tamaño de la letra de la ronda" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambiar el tamaño de la letra de la ronda" />
+    <MESSAGE value="Aplicado estilizado por defecto de IntelliJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aplicado estilizado por defecto de IntelliJ" />
   </component>
 </project>
